@@ -20,6 +20,17 @@ body {
   margin: 30px auto;
 }
 
+.standard-link {
+  color: #475055;
+  text-decoration: none;
+}
+
+.transition:hover {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
 
 /* Header */
 .header {
@@ -67,18 +78,12 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
-  color: #475055;
-  text-decoration: none;
   font-weight: 400;
   line-height: 18px;
-
 }
 
 .header-menu-link:hover {
   color: #56ccc8;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
 }
 
 .header-social {
@@ -171,24 +176,97 @@ body {
   display: none;
 }
 
-.main-social-icons {
+.main-social-media {
   display: grid;
   grid-row: 1 / span 2;
 }
 
-.list-social-icons {
+.list-social-media {
   background-color: #fff;
   display: grid;
-  grid-template-rows: repeat(5, 50px);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   align-items: stretch;
   justify-content: stretch;
+  padding-left: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .main-social-item {
   display: grid;
-  align-items: stretch;
-  justify-content: stretch;
+  align-items: center;
+  justify-content: flex-start;
   grid-auto-flow: column;
+
+}
+
+.main-social-item a .main-social-icon {
+  display: inline-block;
+}
+
+.main-social-item .main-social-icon {
+  margin-right: 1em;
+  color: #fff;
+  background-color: #c5cdd1;
+  border-radius: 50%;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+.main-social-fb:hover {
+  color: #4d6baa;
+}
+
+.main-social-fb:hover .icon-facebook {
+  background-color: #4d6baa;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.main-social-twitter:hover {
+  color: #4fc6f8;
+}
+
+.main-social-twitter:hover .icon-twitter {
+  background-color: #4fc6f8;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.main-social-gplus:hover {
+  color: #ea6060;
+}
+
+.main-social-gplus:hover .icon-gplus {
+  background-color: #ea6060;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.main-social-rss:hover {
+  color: #f60;
+}
+
+.main-social-rss:hover .icon-rss {
+  background-color: #f60;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.main-social-pint:hover {
+  color: #bd081c;
+}
+
+.main-social-pint:hover .icon-pinterest {
+  background-color: #bd081c;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 
 .facebook-section {

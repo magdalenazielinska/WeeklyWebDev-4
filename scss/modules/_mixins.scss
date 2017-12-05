@@ -1,0 +1,51 @@
+@mixin hover-link {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@mixin form {
+  ::-webkit-input-placeholder {
+    color:$placeholder-color;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.75em;
+  }
+  ::-moz-placeholder {
+    color:$placeholder-color;
+  }
+  :-ms-input-placeholder {
+    color:$placeholder-color;
+  }
+  :-moz-placeholder {
+    color:$placeholder-color;
+  }
+  input, textarea {
+    border: 1px solid $placeholder-color;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  input:focus, textarea:focus {
+    outline-color: $aqua;
+  }
+  [type="submit"] {
+    background-color: $google-color;
+    color: $white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid $google-color;
+    line-height: 1.75em;
+    max-width: 97px;
+    height: 39px;
+  }
+
+}
+
+%gray-link {
+  color: $main-text-color;
+  text-decoration: none;
+}

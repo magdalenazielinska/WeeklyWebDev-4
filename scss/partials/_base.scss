@@ -1,0 +1,30 @@
+/* Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+body {
+  color: #475055;
+  background-color: #546c84;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 928px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  border: 1px solid red;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  font-weight: 500;
+}

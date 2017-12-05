@@ -1,0 +1,133 @@
+/* Header */
+
+.header {
+  display: grid;
+  background-color: $white;
+  grid-template-columns: 60px 2fr 1fr;
+  grid-template-rows: 60px;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.header_button {
+  background-color: $aqua;
+  color: $white;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.header_nav {
+  width: 75%;
+  align-self: center;
+
+  .nav_menu {
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 1.5em;
+
+    .nav_menu_item {
+      display: inline-block;
+      justify-self: center;
+
+      a {
+        font-weight: 400;
+        line-height: 18px;
+        @extend %gray-link;
+        @include hover-link;
+
+        &:hover {
+          color: $aqua;
+        }
+      }
+    }
+  }
+}
+
+.header_social {
+  display: grid;
+  grid-column: 3 / span 1;
+
+  .header_social_icons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    font-size: 1.1em;
+    margin-right: 0.5em;
+
+    .social_item {
+      display: grid;
+      color: $header-icons-color;
+
+      a {
+        color: $header-icons-color;
+        align-self: center;
+        @include hover-link;
+
+        &.a-search:hover {
+          color: $aqua;
+        }
+
+        &.a-facebook {
+          padding-left: 0.5em;
+          margin-left: 0.5em;
+
+          &:hover {
+            color: $facebook-color;
+          }
+        }
+
+        &.a-twitter:hover {
+          color: $twitter-color;
+        }
+
+        &.a-gplus {
+          padding-right: 0.5em;
+          margin-right: 0.5em;
+
+          &:hover {
+            color: $google-color;
+          }
+        }
+
+        &.a-user:hover {
+          color: $aqua;
+        }
+      }
+
+      &:nth-child(3) {
+        border-left: 1px solid $header-icons-color;
+      }
+
+      &:nth-child(5) {
+        border-right: 1px solid $header-icons-color;
+      }
+    }
+
+    form {
+      display: none;
+      /*po podpięciu javascript będzie display: grid;*/
+      align-items: center;
+      justify-content: center;
+
+      .search-input {
+        max-width: 130px;
+        border: 1px solid $header-icons-color;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: $navy-dark;
+        font-size: 0.8em;
+        line-height: 2em;
+
+        &:focus {
+          outline-color: $aqua;
+        }
+      }
+    }
+  }
+}
+
+
+
+

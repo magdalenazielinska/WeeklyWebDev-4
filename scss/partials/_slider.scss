@@ -1,0 +1,9 @@
+/* Slider */
+
+.slider {
+  background-color: $gray;
+  max-height: 453px;
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  grid-template-rows: 2fr 1fr;
+}

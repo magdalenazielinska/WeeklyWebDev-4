@@ -1,0 +1,244 @@
+/* Navigation */
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1em;
+  margin-bottom: 1em;
+
+}
+
+/* Left menu */
+.side_nav {
+  background-color: $white;
+  grid-row: 1 / span 4;
+}
+
+/* Blog categories */
+.blog {
+  display: none;
+}
+
+/* Social media */
+.main_social_media {
+  display: grid;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+  background-color: $white;
+
+  .social_list {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    justify-items: start;
+    background-color: $white;
+    padding: 0.5em 2em;
+
+    .main_social_item {
+      display: inline-block;
+
+      a {
+        @extend %gray-link;
+        @include hover-link;
+
+        &.a-facebook:hover {
+          color: $facebook-color;
+
+          .icon-facebook {
+            background-color: $facebook-color;
+          }
+        }
+
+        &.a-twitter:hover {
+          color: $twitter-color;
+
+          .icon-twitter {
+            background-color: $twitter-color;
+          }
+        }
+
+        &.a-gplus:hover {
+          color: $google-color;
+
+          .icon-gplus {
+            background-color: $google-color;
+          }
+        }
+
+        &.a-rss:hover {
+          color: $rss-color;
+
+          .icon-rss {
+            background-color: $rss-color;
+          }
+        }
+
+        &.a-pint:hover {
+          color: $pinterest-color;
+
+          .icon-pinterest {
+            background-color: $pinterest-color;
+          }
+        }
+
+        i {
+          margin-right: 1em;
+          color: $white;
+          background-color: $light-gray;
+          border-radius: 50%;
+          display: inline-block;
+          width: 2em;
+          line-height: 2em;
+          text-align: center;
+          @include hover-link;
+        }
+      }
+    }
+  }
+}
+
+/* FB and Twitter section */
+%fb-twitt-sect {
+  display: grid;
+  grid-column: 3 / span 1;
+  padding: 1em;
+  color: $white;
+
+  .large-social {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    font-size: $large-social-font-size;
+    padding-bottom: 0.8em;
+  }
+
+  .followers_num {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    padding-left: 1em;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: left;
+  }
+
+  .follow_social {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    text-align: right;
+    padding-right: 0.5em;
+    line-height: 1.5em;
+    font-weight: 300;
+
+    .follow_click {
+      margin-left: 0.8em;
+      color: $white;
+      cursor: pointer;
+      border: 2px solid $white;
+      border-radius: 50%;
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+
+    .following_click--twitter {
+      @extend .follow_click;
+      background-color: $white;
+      color: $twitter-color;
+    }
+
+    .following_click--facebook {
+      @extend .follow_click;
+      background-color: $white;
+      color: $facebook-color;
+    }
+  }
+}
+.facebook_section {
+  @extend %fb-twitt-sect;
+  grid-row: 1 / span 1;
+  background-color: $facebook-color;
+}
+
+.twitter_section  {
+  @extend %fb-twitt-sect;
+  grid-row: 2 / span 1;
+  background-color: $twitter-color;
+}
+
+/* Sign in */
+
+%sign-news {
+  grid-column: 2 / span 2;
+  background-color: $white;
+  padding: 1.5em;
+  text-align: center;
+  h2 {
+    font-weight: 400;
+    margin-bottom: 0.5em;
+  }
+  p {
+    margin-bottom: 1.5em;
+    line-height: 1.75em;
+  }
+
+}
+.singin {
+  @extend %sign-news;
+  grid-row: 3 / span 1;
+
+  p {
+    font-weight: 100;
+    font-size: 100%;
+  }
+  .signin_social_item {
+    display: inline-block;
+
+    a {
+
+      i {
+        margin-right: 1em;
+        color: $white;
+        background-color: $light-gray;
+        border-radius: 50%;
+        display: inline-block;
+        width: 2em;
+        line-height: 2em;
+        text-align: center;
+
+        &.icon-facebook {
+          background-color: $facebook-color;
+        }
+
+        &.icon-twitter {
+          background-color: $twitter-color;
+        }
+
+        &.icon-gplus {
+          background-color: $google-color;
+        }
+
+        &.icon-linkedin {
+          background-color: $linkedin-color;
+        }
+      }
+    }
+  }
+}
+
+
+/* Newsletter */
+.newsletter {
+  @extend %sign-news;
+  grid-row: 4 / span 1;
+
+  p {
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-column-gap: 1em;
+    @include form;
+  }
+}

@@ -4,42 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weekly Webdev Challenge 4</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <button class="header-button">
+      <button class="header_button">
         <i class="icon-menu"></i>
       </button>
-      <nav class="header-nav">
-        <ul class="header-menu">
-          <li class="header-menu-item"><a href="#" class="standard-link header-menu-link transition">Home</a></li>
-          <li class="header-menu-item"><a href="#" class="standard-link header-menu-link transition">Store</a></li>
-          <li class="header-menu-item"><a href="#" class="standard-link header-menu-link transition">Blog</a></li>
-          <li class="header-menu-item"><a href="#" class="standard-link header-menu-link transition">About</a></li>
-          <li class="header-menu-item"><a href="#" class="standard-link header-menu-link transition">Contact</a></li>
+      <nav class="header_nav">
+        <ul class="nav_menu">
+          <li class="nav_menu_item"><a href="#">Home</a></li>
+          <li class="nav_menu_item"><a href="#">Store</a></li>
+          <li class="nav_menu_item"><a href="#">Blog</a></li>
+          <li class="nav_menu_item"><a href="#">About</a></li>
+          <li class="nav_menu_item"><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <div class="header-social">
-        <ul class="header-social-icons">
-          <li class="social-item"><a href="#" class="header-menu-link a-search transition transition"><i class="icon-search"></i></a></li>
+      <div class="header_social">
+        <ul class="header_social_icons">
+          <li class="social_item"><a href="#" class="a-search"><i class="icon-search"></i></a></li>
           <form action="#" method="post" class="search-form">
             <input type="text" name="search" type="search" class="search-input">
           </form>
-          <li class="social-item"><a href="#" class="header-menu-link a-facebook transition"><i class="icon-facebook"></i></a></li>
-          <li class="social-item"><a href="#" class="header-menu-link a-twitter transition"><i class="icon-twitter"></i></a></li>
-          <li class="social-item"><a href="#" class="header-menu-link a-gplus transition"><i class="icon-gplus"></i></a></li>
-          <li class="social-item"><a href="#" class="header-menu-link a-user transition"><i class="icon-user"></i></a></i></li>
+          <li class="social_item"><a href="#" class="a-facebook"><i class="icon-facebook"></i></a></li>
+          <li class="social_item"><a href="#" class="a-twitter"><i class="icon-twitter"></i></a></li>
+          <li class="social_item"><a href="#" class="a-gplus"><i class="icon-gplus"></i></a></li>
+          <li class="social_item"><a href="#" class="a-user"><i class="icon-user"></i></a></li>
         </ul>
       </div>
     </header>
 
     <main>
       <section class="navigation">
-        <div class="side-nav">
+        <div class="side_nav">
           <nav>
             <ul class="side-menu">
               <li class="side-menu-item"><i class="icon-home"></i><a href="#">Home</a></li>
@@ -92,46 +91,48 @@
             </ul>
           </div>
         </div>
-        <div class="main-social-media">
-          <ul class="list-social-media">
-            <li class="main-social-item"><a href="#" class="standard-link main-social-fb transition"><i class="icon-facebook main-social-icon"></i>Facebook</a></li>
-            <li class="main-social-item"><a href="#" class="standard-link main-social-twitter transition"><i class="icon-twitter main-social-icon"></i>Twitter</a></li>
-            <li class="main-social-item"><a href="#" class="standard-link main-social-gplus transition"><i class="icon-gplus main-social-icon"></i>Google +</a></li>
-            <li class="main-social-item"><a href="#" class="standard-link main-social-rss transition"><i class="icon-rss main-social-icon"></i>Rss Feeds</a></li>
-            <li class="main-social-item"><a href="#" class="standard-link main-social-pint transition"><i class="icon-pinterest main-social-icon"></i>Pinterest</a></li>
+        <div class="main_social_media">
+          <ul class="social_list">
+            <li class="main_social_item"><a href="#" class="a-facebook"><i class="icon-facebook"></i>Facebook</a></li>
+            <li class="main_social_item"><a href="#" class="a-twitter"><i class="icon-twitter"></i>Twitter</a></li>
+            <li class="main_social_item"><a href="#" class="a-gplus"><i class="icon-gplus"></i>Google +</a></li>
+            <li class="main_social_item"><a href="#" class="a-rss"><i class="icon-rss"></i>Rss Feeds</a></li>
+            <li class="main_social_item"><a href="#" class="a-pint"><i class="icon-pinterest"></i>Pinterest</a></li>
           </ul>
         </div>
-        <div class="facebook-section">
+        <div class="facebook_section">
           <i class="icon-facebook large-social"></i>
-          <p class="num-followers">156K</p>
-          <div class="follow-social">
+          <p class="followers_num">156K</p>
+          <div class="follow_social">
             Follow
-            <i class="icon-plus click-follow"></i>
+            <i class="icon-plus follow_click"></i>
           </div>
         </div>
-        <div class="twitter-section">
+        <div class="twitter_section">
           <i class="icon-twitter large-social"></i>
-          <p class="num-followers">89K</p>
-          <div class="follow-social">
+          <p class="followers_num">89K</p>
+          <div class="follow_social">
             Following
-            <i class="icon-ok click-follow"></i>
+            <i class="icon-ok following_click--twitter"></i>
           </div>
         </div>
         <div class="singin">
           <h2>Sing in</h2>
           <p>Just select your favorite social network to get started</p>
           <ul>
-            <li>F</li>
-            <li>T</li>
-            <li>G</li>
-            <li>L</li>
+            <li class="signin_social_item"><a href="#" class="a-facebook"><i class="icon-facebook"></i></a></li>
+            <li class="signin_social_item"><a href="#" class="a-twitter"><i class="icon-twitter"></i></a></li>
+            <li class="signin_social_item"><a href="#" class="a-gplus"><i class="icon-gplus"></i></a></li>
+            <li class="signin_social_item"><a href="#" class="a-linkedin"><i class="icon-linkedin"></i></a></li>
           </ul>
         </div>
-        <div class="join-news">
+        <div class="newsletter">
           <h2>Join the Newsletter</h2>
           <p>Sign up for our personalized daily newsletter</p>
-          <input type="email" name="email" placeholder="Enter email address">
-          <input type="submit" value="Sign up">
+          <form>
+            <input type="email" name="email" placeholder="Enter email address">
+            <input type="submit" value="Sign up">
+          </form>
         </div>
       </section>
 

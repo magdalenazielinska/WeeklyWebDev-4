@@ -11,8 +11,72 @@
 
 /* Left menu */
 .side_nav {
-  background-color: $white;
+  display: grid;
   grid-row: 1 / span 4;
+  background-color: $white;
+
+  nav {
+    display: grid;
+
+    .side_menu {
+      display: grid;
+      align-items: center;
+
+      .side_menu_item {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        padding: 1em;
+        border-bottom: 1px solid $light-gray;
+        @include hover-link;
+
+        i {
+          color: $light-gray;
+          font-size: 1.5em;
+          padding-right: 1em;
+        }
+
+        a {
+          @extend %gray-link;
+          @include hover-link;
+        }
+
+        &:hover {
+          background-color: $aqua;
+          border-bottom: 1px solid $aqua;
+
+          i {
+            color: $white;
+          }
+
+          a {
+            color: $white;
+          }
+
+        }
+      }
+    }
+  }
+
+  .side_address {
+    display: grid;
+    align-items: center;
+    background-color: $light-gray;
+    color: $white;
+    padding: 1em;
+
+    .side_address_item {
+      display: grid;
+      grid-auto-flow: column;
+      justify-self: start;
+      font-size: 0.9em;
+
+      i {
+        font-size: 1.5em;
+        padding-right: 1em;
+      }
+    }
+  }
 }
 
 /* Blog categories */
@@ -29,10 +93,7 @@
 
   .social_list {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
     align-items: center;
-    justify-items: start;
-    background-color: $white;
     padding: 0.5em 2em;
 
     .main_social_item {

@@ -1,4 +1,4 @@
-/* Navigation */
+/* ===== Navigation ===== */
 
 .navigation {
   display: grid;
@@ -9,7 +9,7 @@
 
 }
 
-/* Left menu */
+/* ===== Left menu ===== */
 .side_nav {
   display: grid;
   grid-row: 1 / span 4;
@@ -63,13 +63,17 @@
     align-items: center;
     background-color: $light-gray;
     color: $white;
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
 
     .side_address_item {
       display: grid;
       grid-auto-flow: column;
       justify-self: start;
       font-size: 0.9em;
+      padding-bottom: 1em;
+
 
       i {
         font-size: 1.5em;
@@ -79,12 +83,12 @@
   }
 }
 
-/* Blog categories */
+/* ===== Blog categories ===== */
 .blog {
   display: none;
 }
 
-/* Social media */
+/* ===== Social media ===== */
 .main_social_media {
   display: grid;
   grid-column: 2 / span 1;
@@ -159,7 +163,7 @@
   }
 }
 
-/* FB and Twitter section */
+/* ===== FB and Twitter section ===== */
 %fb-twitt-sect {
   display: grid;
   grid-column: 3 / span 1;
@@ -225,7 +229,7 @@
   background-color: $twitter-color;
 }
 
-/* Sign in */
+/* ===== Sign in ===== */
 
 %sign-news {
   grid-column: 2 / span 2;
@@ -286,7 +290,7 @@
 }
 
 
-/* Newsletter */
+/* ===== Newsletter ===== */
 .newsletter {
   @extend %sign-news;
   grid-row: 4 / span 1;

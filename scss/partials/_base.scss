@@ -16,8 +16,11 @@ body {
 .container {
   max-width: 928px;
   margin: 0 auto;
-  padding: 30px 20px;
-  border: 1px solid red;
+  padding: 30px 0;
+}
+
+.invisible {
+  opacity: 0;
 }
 
 h1 {
@@ -27,4 +30,8 @@ h1 {
 h2 {
   font-size: $h2-font-size;
   font-weight: 500;
+}
+
+ul, ol {
+  list-style: none;
 }

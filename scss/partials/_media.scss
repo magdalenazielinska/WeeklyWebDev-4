@@ -1,0 +1,218 @@
+/* ===== Media ===== */
+
+.media {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1em;
+
+  %mediadescr {
+    padding: 2em 1em;
+
+    .media--header {
+      font-weight: 500;
+      line-height: 1.2em;
+      margin-bottom: 0.5em;
+    }
+
+    .media--when {
+      color: $placeholder-color;
+      font-weight: 300;
+
+    }
+
+    .media--text {
+      font-weight: 300;
+      font-size: 0.9em;
+      line-height: 1.5em;
+      margin-top: 1.5em;
+
+      .readmore {
+        color: $google-color;
+        text-decoration: none;
+
+        &:hover {
+        font-weight: 500;
+        }
+      }
+    }
+  }
+
+  %mediaicon {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-column: 1;
+    margin-top: 2em;
+    height: 40px;
+    width: 40px;
+  }
+
+  %mediashare {
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 1.5em;
+
+    &:hover {
+      color: $google-color;
+    }
+  }
+
+  %likesdescr {
+    display: block;
+    color: $white;
+  }
+
+  .media_video {
+    display: grid;
+    grid-template-columns: 40px 3fr 1fr 6fr;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    background-color: $white;
+
+    .video_icon {
+      @extend %mediaicon;
+      background-color: $google-color;
+
+      &::before {
+        content: '\e80e';
+        font-family: fontello;
+        font-size: 1.2em;
+        color: $white;
+      }
+    }
+
+    .video_descr {
+      grid-column: 2;
+      @extend %mediadescr;
+    }
+
+    .video_actions {
+      display: grid;
+      grid-column: 3;
+      align-items: center;
+      justify-items: center;
+      background-color: $navy-dark;
+      padding: 1em;
+
+      .media_video--share {
+
+        @extend %mediashare;
+
+        .likes_descr {
+          @extend %likesdescr;
+        }
+      }
+
+      .media_photo--heartempty {
+        &::before {
+          content: '\e80f';
+          font-family: fontello;
+          font-size: 2em;
+          @include hover-link;
+        }
+      }
+
+      .media_photo--later {
+        &::before {
+          content: '\e810';
+          font-family: fontello;
+          font-size: 2em;
+          @include hover-link;
+        }
+      }
+
+      .media_photo--export {
+        &::before {
+          content: '\e811';
+          font-family: fontello;
+          font-size: 2em;
+          @include hover-link;
+        }
+      }
+    }
+
+    .video_example {
+      grid-column: 4;
+      background-color: $gray;
+      width:100%;
+      height: 100%;
+    }
+  }
+
+  .media_photo--likes {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 2;
+    background-color: $navy-dark;
+    padding: 1em;
+
+    .media_photo--share {
+      align-self: center;
+      display: inline-block;
+      font-size: 1.1em;
+      @extend %mediashare;
+
+      .likes_descr {
+        @extend %likesdescr;
+      }
+    }
+
+    .media_photo--export {
+      margin-right: 2em;
+
+      &::before {
+        content: '\e811';
+        font-family: fontello;
+        font-size: 2em;
+        @include hover-link;
+      }
+    }
+
+    .media_photo--heart {
+      &::before {
+        content: '\e813';
+        font-family: fontello;
+        font-size: 2em;
+        @include hover-link;
+      }
+    }
+  }
+
+  .media_photo--instagram {
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr 40px;
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    background-color: $white;
+
+    .insta_icon {
+      @extend %mediaicon;
+      background-color: $twitter-color;
+
+      &::before {
+        content: '\e814';
+        font-family: fontello;
+        font-size: 1.2em;
+        color: $white;
+      }
+    }
+
+    .insta_descr {
+      grid-column: 2;
+      @extend %mediadescr;
+    }
+
+    .insta_photo {
+      grid-column: 3 / span 2;
+      background-color: $gray;
+      background: url("../images/insta.jpg") no-repeat center;
+      background-size: cover;
+      height: 300px;
+    }
+  }
+}

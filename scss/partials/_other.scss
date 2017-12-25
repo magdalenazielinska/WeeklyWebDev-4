@@ -1,0 +1,132 @@
+/* ===== Other ===== */
+
+.other {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 1fr 3fr 75px 75px 2fr;
+  grid-gap: 1em;
+
+  .other_twitter {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background-color: $twitter-color;
+  }
+
+  .other_hot {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+    background-color: $white;
+  }
+
+  .other_contact {
+    grid-column: 1;
+    grid-row: 5 / span 2;
+    background-color: $white;
+    padding: 2em;
+
+    h2 {
+      margin-bottom: 1em;
+    }
+
+    form {
+      @include form;
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
+
+  .other_calendar {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: $navy-dark;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    p {
+      color: $white;
+      font-size: 2em;
+      font-weight: 300;
+    }
+  }
+
+  .other_more {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: $google-color;
+    padding: 3em 4em;
+
+    p {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 2.3em;
+      font-weight: 300;
+      text-align: left;
+    }
+
+    .other_more--arrow {
+      margin-top: 2em;
+
+      i {
+        display: inline-block;
+        color: $google-color;
+        background-color: $white;
+        border-radius: 50%;
+        width: 2em;
+        line-height: 2em;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .other_article {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    background-color: $white;
+
+  }
+
+  .other_quote {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 2;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    background-color: $white;
+
+    .quote_icon {
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      grid-column: 1;
+      margin-top: 2em;
+      height: 40px;
+      width: 40px;
+      background-color: $aqua;
+
+      &::before {
+        content: '\e815';
+        font-size: 1.2em;
+        color: $white;
+      }
+    }
+
+    .quote_text {
+      grid-column: 2;
+      font-size: 1.5em;
+      font-weight: 300;
+      font-style: italic;
+      padding: 1.5em;
+    }
+  }
+
+  .other_about {
+    display: grid;
+    grid-template-rows: 47px auto;
+    grid-column: 2 / span 2;
+    grid-row: 6;
+    background-color: $white;
+  }
+}

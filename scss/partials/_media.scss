@@ -5,6 +5,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 1em;
+  margin-bottom: 1em;
 
   %mediadescr {
     padding: 2em 1em;
@@ -78,7 +79,6 @@
 
       &::before {
         content: '\e80e';
-        font-family: fontello;
         font-size: 1.2em;
         color: $white;
       }
@@ -106,28 +106,25 @@
         }
       }
 
-      .media_photo--heartempty {
+      .media_video--heartempty {
         &::before {
           content: '\e80f';
-          font-family: fontello;
           font-size: 2em;
           @include hover-link;
         }
       }
 
-      .media_photo--later {
+      .media_video--later {
         &::before {
           content: '\e810';
-          font-family: fontello;
           font-size: 2em;
           @include hover-link;
         }
       }
 
-      .media_photo--export {
+      .media_video--export {
         &::before {
           content: '\e811';
-          font-family: fontello;
           font-size: 2em;
           @include hover-link;
         }
@@ -167,7 +164,6 @@
 
       &::before {
         content: '\e811';
-        font-family: fontello;
         font-size: 2em;
         @include hover-link;
       }
@@ -176,7 +172,6 @@
     .media_photo--heart {
       &::before {
         content: '\e813';
-        font-family: fontello;
         font-size: 2em;
         @include hover-link;
       }
@@ -196,7 +191,6 @@
 
       &::before {
         content: '\e814';
-        font-family: fontello;
         font-size: 1.2em;
         color: $white;
       }
@@ -212,7 +206,7 @@
       background-color: $gray;
       background: url("../images/insta.jpg") no-repeat center;
       background-size: cover;
-      height: 300px;
+      min-height: 300px;
     }
   }
 }

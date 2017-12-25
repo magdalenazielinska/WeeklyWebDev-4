@@ -14,18 +14,28 @@
   }
   ::-moz-placeholder {
     color:$placeholder-color;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.75em;
   }
   :-ms-input-placeholder {
     color:$placeholder-color;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.75em;
   }
   :-moz-placeholder {
     color:$placeholder-color;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.75em;
   }
   input, textarea {
     border: 1px solid $placeholder-color;
     width: 100%;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    font-family: Roboto;
   }
   input:focus, textarea:focus {
     outline-color: $aqua;
@@ -42,6 +52,7 @@
     max-width: 97px;
     height: 39px;
     cursor: pointer;
+    margin-bottom: -1em;
   }
 
 }

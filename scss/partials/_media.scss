@@ -11,7 +11,6 @@
     padding: 2em 1em;
 
     .media--header {
-      font-weight: 500;
       line-height: 1.2em;
       margin-bottom: 0.5em;
     }
@@ -27,27 +26,9 @@
       font-size: 0.9em;
       line-height: 1.5em;
       margin-top: 1.5em;
-
-      .readmore {
-        color: $google-color;
-        text-decoration: none;
-
-        &:hover {
-        font-weight: 500;
-        }
-      }
     }
   }
 
-  %mediaicon {
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    grid-column: 1;
-    margin-top: 2em;
-    height: 40px;
-    width: 40px;
-  }
 
   %mediashare {
     text-align: center;
@@ -74,7 +55,7 @@
     background-color: $white;
 
     .video_icon {
-      @extend %mediaicon;
+      @include mediaicon;
       background-color: $google-color;
 
       &::before {
@@ -186,7 +167,7 @@
     background-color: $white;
 
     .insta_icon {
-      @extend %mediaicon;
+      @include mediaicon;
       background-color: $twitter-color;
 
       &::before {

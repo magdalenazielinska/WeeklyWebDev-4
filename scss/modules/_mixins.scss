@@ -61,3 +61,13 @@
   color: $main-text-color;
   text-decoration: none;
 }
+
+@mixin mediaicon {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-column: 1;
+  margin-top: 2em;
+  height: 40px;
+  width: 40px;
+}

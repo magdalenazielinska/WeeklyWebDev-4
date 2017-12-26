@@ -20,7 +20,17 @@ body {
 }
 
 .invisible {
-  opacity: 0;
+  display: none !important;
+  @include hover-link;
+}
+
+.readmore {
+  color: $google-color;
+  text-decoration: none;
+
+  &:hover {
+    font-weight: 500;
+  }
 }
 
 h1 {

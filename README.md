@@ -10,10 +10,10 @@ View: [here](https://magdalenazielinska.github.io/WeeklyWebDev-4)
 
 ## Task list
 
-[x] HTML5
-[x] CSS3 / Sass
-[] RWD
-[] JavaScript
+- [x] HTML5
+- [x] CSS3 / Sass
+- [] RWD
+- [] JavaScript
 
 
 

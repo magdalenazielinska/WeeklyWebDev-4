@@ -12,8 +12,8 @@ View: [here](https://magdalenazielinska.github.io/WeeklyWebDev-4)
 
 - [x] HTML5
 - [x] CSS3 / Sass
-- [] RWD
-- [] JavaScript
+- [ ] RWD
+- [ ] JavaScript
 
 
 
